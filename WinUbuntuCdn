@@ -1,0 +1,3 @@
+sudo vi /etc/apt/sources.list
+
+:%s/kr.archive.ubuntu.com/ftp.daumkakao.com

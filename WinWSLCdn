@@ -2,4 +2,4 @@ sudo npm install -g ffum
 ffum
 sudo vi /etc/apt/sources.list
 
-:%s/kr.archive.ubuntu.com/mirror.kakao.com
+:%s/archive.ubuntu.com/mirror.kakao.com

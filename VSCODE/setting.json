@@ -5,35 +5,55 @@
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.fontFamily": "'D2Coding', Consolas",
+
   "files.exclude": {
     ".git/": true,
     "node_modules/": true
   },
+
   "search.exclude": {
     ".git/": true
   },
+
   "code-runner.executorMap": {
     "javascript": "cd $dir && node $fileName",
     "ocaml": "cd $dir && ocaml $fileName",
     "c": "cd $dir && gcc $fileName -o test.exe && ./test.exe && echo  && echo ----done---- && rm ./test.exe",
-    "cpp": "cd $dir && g++ $fileName -o test.exe && ./test.exe && echo  && echo ----done---- && rm ./test.exe"
+    "cpp": "cd $dir && g++ $fileName -o test.exe && ./test.exe && echo  && echo ----done---- && rm ./test.exe",
+    "csharp": "cd $dir && dotnet run"
   },
-  "code-runner.customCommand": "cd $dir && make clean",
-  //"code-runner.customCommand": "g++ $fileName -o output/test.exe && ./output/test.exe < ./input/input.txt > ./output/output.txt && echo ----done---- && rm ./output/test.exe",
-  "code-runner.terminalRoot": "/mnt/",
-  "code-runner.runInTerminal": true,
   "code-runner.executorMapByGlob": {
     "main.ml": "cd $dir; make",
     "*.spec": "cd $dir; cd ..; ./run -pp test/$fileName.spec"
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "code-runner.executorMapByFileExtension": {
+    "cs": "cd $dir && dotnet run"
   },
-  "terminal.integrated.shell.windows": "C:\\Users\\TheSky\\AppData\\Local\\Microsoft\\WindowsApps\\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\\ubuntu.exe",
-  "terminal.external.windowsExec": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "code-runner.runInTerminal": true,
+
+  // "code-runner.terminalRoot": "/mnt/",
+
+  "code-runner.customCommand": "echo helllo",
+  // "code-runner.customCommand": "cd $dir && make clean",
+  // "code-runner.customCommand": "g++ $fileName -o output/test.exe && ./output/test.exe < ./input/input.txt > ./output/output.txt && echo ----done---- && rm ./output/test.exe",
+
+  // "terminal.explorerKind": "external",
+  // "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
+
+  "terminal.explorerKind": "integrated",
+  // window cmd
+  // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  // window ubuntu app
+  // "terminal.integrated.shell.windows": "C:\\Users\\TheSky\\AppData\\Local\\Microsoft\\WindowsApps\\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\\ubuntu.exe",
+  // window powershell
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  // window bash
+  // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
+
   "breadcrumbs.enabled": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.startupEditor": "welcomePage",
-  "terminal.explorerKind": "external"
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

@@ -4,6 +4,7 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
+  "editor.fontFamily": "'D2Coding', Consolas",
   "files.exclude": {
     ".git/": true,
     "node_modules/": true

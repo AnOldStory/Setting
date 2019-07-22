@@ -1,0 +1,29 @@
+{
+  "editor.tabSize": 4,
+  "editor.suggestSelection": "first",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.fontFamily": "'D2Coding', Consolas",
+  "files.exclude": {
+    ".git/": true,
+    "node_modules/": true
+  },
+  "search.exclude": {
+    ".git/": true
+  },
+  "code-runner.executorMap": {
+    "javascript": "cd $dir && node $fileName",
+    "ocaml": "cd $dir && ocaml $fileName",
+    "c": "cd $dir && gcc $fileName -o test.exe && ./test.exe && echo  && echo ----done---- && rm ./test.exe",
+    "cpp": "cd $dir && g++ $fileName -o test.exe && ./test.exe && echo  && echo ----done---- && rm ./test.exe"
+  },
+  "code-runner.executorMapByGlob": {},
+  "code-runner.executorMapByFileExtension": {
+    "cs": "clear && cd $dir && cd .. && cd jsresl_prose && msbuild && cat input.txt | mono ./bin/Debug/jsresl_prose.exe"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.customCommand": "clear && cd $dir && cd .. && cd jsresl_prose && cat input.txt | mono ./bin/Debug/jsresl_prose.exe",
+  "terminal.explorerKind": "integrated",
+  "breadcrumbs.enabled": true
+}

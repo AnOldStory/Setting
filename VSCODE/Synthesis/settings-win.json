@@ -1,0 +1,30 @@
+{
+  "editor.tabSize": 4,
+  "editor.suggestSelection": "first",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.fontFamily": "'D2Coding', Consolas",
+  "files.exclude": {
+    ".git/": true,
+    "node_modules/": true
+  },
+  "search.exclude": {
+    ".git/": true
+  },
+  "code-runner.ignoreSelection": true,
+  "code-runner.executorMap": {
+    "csharp": "cd $dir && cd .. && cd jsresl_prose && dotnet build && cat testcase.txt | ./bin/Debug/jsresl_prose"
+  },
+  "code-runner.executorMapByGlob": {},
+  "code-runner.executorMapByFileExtension": {},
+  "code-runner.runInTerminal": true,
+
+  "code-runner.customCommand": "cd $dir && cd .. && cd jsresl_prose && cat testcase.txt | ./bin/Debug/jsresl_prose",
+
+  "terminal.explorerKind": "integrated",
+
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+
+  "breadcrumbs.enabled": true
+}

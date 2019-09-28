@@ -3,7 +3,6 @@
   "editor.suggestSelection": "first",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.insertSpaces": true,
   "editor.fontFamily": "'D2Coding', Consolas",
 
   "files.exclude": {
@@ -16,22 +15,22 @@
   },
 
   "code-runner.executorMap": {
-    "javascript": "cd $dir && node $fileName",
-    "ocaml": "cd $dir && ocaml $fileName",
-    "c": "cd $dir && gcc $fileName -o test.exe && ./test.exe && echo  && echo ----done---- && rm ./test.exe",
-    "cpp": "cd $dir && g++ $fileName -o test.exe && ./test.exe && echo  && echo ----done---- && rm ./test.exe",
-    "csharp": "cd $dir && dotnet run"
+    "javascript": "cd $dir && node \"$fileName\"",
+    "ocaml": "cd $dir && ocaml \"$fileName\"",
+    "c": "cd $dir && gcc \"$fileName\" -o test.exe && ./test.exe && echo  && echo ----done---- && rm ./test.exe",
+    "cpp": "cd $dir && g++ \"$fileName\" -o test.exe && ./test.exe && echo  && echo ----done---- && rm ./test.exe",
+    "csharp": "cd $dir && dotnet build"
   },
   "code-runner.executorMapByGlob": {
-    "main.ml": "cd $dir; make",
-    "*.spec": "cd $dir; cd ..; ./run -pp test/$fileName.spec"
+    // "main.ml": "cd $dir; make",
+    // "*.spec": "cd $dir; cd ..; ./run -pp test/$fileName.spec"
   },
   "code-runner.executorMapByFileExtension": {
-    "cs": "cd $dir && dotnet run"
+    //"cs": "cd $dir && dotnet run"
   },
   "code-runner.runInTerminal": true,
 
-  // "code-runner.terminalRoot": "/mnt/",
+  "code-runner.terminalRoot": "/mnt/",
 
   "code-runner.customCommand": "echo helllo",
   // "code-runner.customCommand": "cd $dir && make clean",
@@ -44,9 +43,9 @@
   // window cmd
   // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
   // window ubuntu app
-  // "terminal.integrated.shell.windows": "C:\\Users\\TheSky\\AppData\\Local\\Microsoft\\WindowsApps\\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\\ubuntu.exe",
+  "terminal.integrated.shell.windows": "C:\\Users\\TheSky\\AppData\\Local\\Microsoft\\WindowsApps\\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\\ubuntu.exe",
   // window powershell
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  // "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
   // window bash
   // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
 
@@ -55,5 +54,7 @@
   "workbench.startupEditor": "welcomePage",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.formatOnType": true,
+  "diffEditor.ignoreTrimWhitespace": true
 }

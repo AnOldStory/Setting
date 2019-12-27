@@ -1,0 +1,13 @@
+<Configuration>
+<MappedFolders>
+   <MappedFolder>
+     <HostFolder>C:\Users\TheSky\Links\NPKI</HostFolder>
+     <ReadOnly>true</ReadOnly>
+   </MappedFolder>
+</MappedFolders>
+<LogonCommand>
+   <Command>explorer.exe "C:\Program Files\Internet Explorer"</Command>
+</LogonCommand>
+</Configuration>
+
+<Configuration> 

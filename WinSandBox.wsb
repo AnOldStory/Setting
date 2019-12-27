@@ -9,5 +9,3 @@
    <Command>explorer.exe "C:\Program Files\Internet Explorer"</Command>
 </LogonCommand>
 </Configuration>
-
-<Configuration> 

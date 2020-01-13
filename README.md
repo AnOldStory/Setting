@@ -18,7 +18,7 @@ Mac
 | 링크 | 설명 |
 | --- | --- |
 | [MacNoSleep](https://anoldstory.github.io/Setting/MacNoSleep) | 맥북 충전중 잠자기 방지 |
-| [MacSshPass](https://anoldstory.github.io/Setting/MacSshPass) | 맥북 sshpass설치  |
+| [MacSshpass](https://anoldstory.github.io/Setting/MacSshpass) | 맥북 sshpass설치  |
 
 
 ETC

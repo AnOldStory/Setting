@@ -24,8 +24,8 @@ Mac
 ===
 | 링크 | 설명 | 다운로드 |
 | --- | --- | --- |
-| [MacNoSleep](https://raw.githubusercontent.com/AnOldStory/Setting/master/Mac/MacNoSleep.sh)  | 맥북 충전중 잠자기 방지 | [다운로드](https://anoldstory.github.io/Setting/Mac/MacNoSleep.sh)   |
-| [MacSshpass](https://raw.githubusercontent.com/AnOldStory/Setting/master/Mac/MacSshpass.sh)  | 맥북 sshpass설치  | [다운로드](https://anoldstory.github.io/Setting/Mac/MacSshpass.sh)   |
+| [MacNoSleep](https://raw.githubusercontent.com/AnOldStory/Setting/master/Mac/MacNoSleep.sh)    | 맥북 충전중 잠자기 방지 | [다운로드](https://anoldstory.github.io/Setting/Mac/MacNoSleep.sh)    |
+| [MacSshpass](https://raw.githubusercontent.com/AnOldStory/Setting/master/Mac/MacSshpass.sh)    | 맥북 sshpass설치  | [다운로드](https://anoldstory.github.io/Setting/Mac/MacSshpass.sh)    |
 
 
 Ubuntu
@@ -39,7 +39,7 @@ Etc
 ===
 | 링크 | 설명 | 다운로드 |
 | --- | --- | --- |
-| [VibePlayList](https://raw.githubusercontent.com/AnOldStory/Setting/master/etc/VibePlayList.js)  | Vibe 플레이리스트 목록 가져오기 | [다운로드](https://anoldstory.github.io/Setting/etc/VibePlayList.js)   |
+| [VibePlayList](https://raw.githubusercontent.com/AnOldStory/Setting/master/etc/VibePlayList.js)   | Vibe 플레이리스트 목록 가져오기 | [다운로드](https://anoldstory.github.io/Setting/etc/VibePlayList.js)   |
 
 
 <!--

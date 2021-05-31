@@ -30,3 +30,8 @@ echo *******************************************
 echo ************ node-sass install ************
 echo *******************************************
 sudo yarn add global --force node-sass
+
+echo *******************************************
+echo ************ docker install ************
+echo *******************************************
+sudo apt-get -y install docker.io

@@ -1,6 +1,9 @@
 # PersonalSetting
 > 개인적인 설정 파일 목록
 
+
+
+<!-- 
 Windows
 ===
 
@@ -40,7 +43,7 @@ Etc
 | 링크 | 설명 | 다운로드 |
 | --- | --- | --- |
 | [VibePlayList](https://raw.githubusercontent.com/AnOldStory/Setting/master/etc/VibePlayList.js)   | Vibe 플레이리스트 목록 가져오기 | [다운로드](https://anoldstory.github.io/Setting/etc/VibePlayList.js)   |
-
+ -->
 
 <!--
 | []() | test |

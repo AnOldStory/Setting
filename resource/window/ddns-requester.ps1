@@ -1,13 +1,21 @@
 <#
-    ddns-requester.ps1
-    - Request for DDNS 
+  ddns-requester.ps1
+   - Request for DDNS
 #>
+
 function SendGetRequest([string]$url) {
     try { 
         iwr -Uri $url
     } catch {
         echo "request failed $url"
     }
+}
+
+function EncodeMSG([string]$txt) {
+    #how to handle additional querystring
+    $msg = Read-Host -Prompt "Enter message"
+    $encmsg = [System.Web.HttpUtility]::UrlEncode($msg)
+    return $encmsg
 }
 
 SendGetRequest("https://anoldstory.com/ping")

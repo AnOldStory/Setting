@@ -1,7 +1,5 @@
-<#
-  ddns-requester.ps1
-   - Request for DDNS
-#>
+<# ddns-requester.ps1 #>
+# get request for ddns 
 
 function SendGetRequest([string]$url) {
     try { 

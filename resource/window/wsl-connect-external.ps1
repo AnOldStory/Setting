@@ -1,6 +1,5 @@
-<#
- wsl-connect-external.ps1 
-#>
+<# wsl-connect-external.ps1 #>
+# WSL 2 FIrewall Unlock for inner wsl
 
 $remoteport = bash.exe -c "ifconfig eth0 | grep 'inet '"
 $found = $remoteport -match '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}';

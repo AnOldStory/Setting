@@ -5,19 +5,27 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 <###### Configure ######>
 $username = "thesky"
 $program_name = "Setting-Manager_anoldstory" # program name for schdueler & path 
-$path = "$($Env:ProgramData)\$($program_name)\Scheduler\" # program path
+$program_path = "$($Env:ProgramData)\$($program_name)" # program path
 $cdn = "https://raw.githubusercontent.com/AnOldStory/Setting/master/resource/window/"
 
 $wantDDNS = $True # ddns-requester -5min
 $wantWSL = $True # wsl-connect-external -atlogin
 $wantWSLSSH = $True # wsl-ssh-starter -atlogin
+$wantShortcut = $True # make shortcut at run
 
 <###### Log ######>
 #check directory 
-If(!(test-path $path)) 
-  { New-Item -ItemType Directory -Force -Path $path }
+If(!(test-path $program_path)) 
+  { New-Item -ItemType Directory -Force -Path $program_path }
+
+If(!(test-path "$($program_path)\Scheduler")) 
+  { New-Item -ItemType Directory -Force -Path "$($program_path)\Scheduler" }
+
+If(!(test-path "$($program_path)\Shortcut")) 
+  { New-Item -ItemType Directory -Force -Path "$($program_path)\Shortcut" }
+
 #start logging 
-start-Transcript -path "$($path)log.txt" -Force
+start-Transcript -path "$($program_path)\log.txt" -Force
 
 
 <###### DDNS task schedule register ######>
@@ -29,7 +37,7 @@ function DDNS_ON() {
   }
   
   #download file from cdn
-  wget "$($cdn)ddns-requester.ps1" -OutFile "$($path)ddns-requester.ps1"
+  wget "$($cdn)ddns-requester.ps1" -OutFile "$($program_path)\Scheduler\ddns-requester.ps1"
 
   #Create Scheduler for ddns 
   $taskName = "Dynamic DNS by $($program_name)"
@@ -48,7 +56,7 @@ function DDNS_ON() {
       $password = $credentials.GetNetworkCredential().Password
       # $User = "thesky\Administrator"
       $PS = New-ScheduledTaskAction -Execute "PowerShell.exe" `
-                                    -Argument "-noprofile -ExecutionPolicy bypass -File $($path)ddns-requester.ps1"
+                                    -Argument "-noprofile -ExecutionPolicy bypass -File $($program_path)\Scheduler\ddns-requester.ps1"
       Register-ScheduledTask -TaskName $taskName `
                             -TaskPath $taskPath `
                             -Trigger $taskTime `
@@ -68,7 +76,7 @@ function DDNS_ON() {
 <###### wsl-connect-external ######>
 function WSL_External_ON(){
     #download file from cdn
-    wget "$($cdn)wsl-connect-external.ps1" -OutFile "$($path)wsl-connect-external.ps1"
+    wget "$($cdn)wsl-connect-external.ps1" -OutFile "$($program_path)\Scheduler\wsl-connect-external.ps1"
 
     #Create Scheduler for ddns 
     $taskName = "WSL 2 Firewall Unlock by $($program_name)"
@@ -85,7 +93,7 @@ function WSL_External_ON(){
         $password = $credentials.GetNetworkCredential().Password
         # $User = "thesky\Administrator"
         $PS = New-ScheduledTaskAction -Execute "PowerShell.exe" `
-                                      -Argument "-noprofile -ExecutionPolicy bypass -File $($path)wsl-connect-external.ps1"
+                                      -Argument "-noprofile -ExecutionPolicy bypass -File $($program_path)\Scheduler\wsl-connect-external.ps1"
         Register-ScheduledTask -TaskName $taskName `
                               -TaskPath $taskPath `
                               -Trigger $taskTime `
@@ -108,7 +116,7 @@ function WSL_External_ON(){
 <###### wsl-ssh-starter ######>
 function WSL_SSH_ON(){
     #download file from cdn
-    wget "$($cdn)wsl-ssh-starter.ps1" -OutFile "$($path)wsl-ssh-starter.ps1"
+    wget "$($cdn)wsl-ssh-starter.ps1" -OutFile "$($program_path)\Scheduler\wsl-ssh-starter.ps1"
 
     #Create Scheduler for ddns 
     $taskName = "WSL ssh start by $($program_name)"
@@ -125,7 +133,7 @@ function WSL_SSH_ON(){
         $password = $credentials.GetNetworkCredential().Password
         # $User = "thesky\Administrator"
         $PS = New-ScheduledTaskAction -Execute "PowerShell.exe" `
-                                      -Argument "-noprofile -ExecutionPolicy bypass -File $($path)wsl-ssh-starter.ps1"
+                                      -Argument "-noprofile -ExecutionPolicy bypass -File $($program_path)\Scheduler\wsl-ssh-starter.ps1"
         Register-ScheduledTask -TaskName $taskName `
                               -TaskPath $taskPath `
                               -Trigger $taskTime `
@@ -146,10 +154,27 @@ function WSL_SSH_ON(){
 }
 
 
+<###### Run Shortcut ######>
+function Shortcut_ON(){
+  #download shortcut list
+  wget "$($cdn)Links" -OutFile "$($program_path)\Shortcut\"
+
+  #backup
+  $env:path > $program_path\backup_env.txt
+  echo "helloi"
+  if (!($env:Path -like "*$($program_path)\Shortcut*"))
+  {
+    #if not PATH exist
+    [Environment]::SetEnvironmentVariable("Path", $env:Path + ";$($program_path)\Shortcut", "User")
+  }
+}
+
 <###### Script Run  ######>
 if ($wantDDNS) { DDNS_ON }
 if ($wantWSL) { WSL_External_ON }
 if ($wantWSLSSH) { WSL_SSH_ON }
+if ($wantShortcut) { Shortcut_ON }
+
 
 # stop logging
 Stop-Transcript

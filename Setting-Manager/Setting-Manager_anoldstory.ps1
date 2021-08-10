@@ -7,6 +7,7 @@ $username = "thesky"
 $program_name = "Setting-Manager_anoldstory" # program name for schdueler & path 
 $program_path = "$($Env:ProgramData)\$($program_name)" # program path
 $cdn = "https://raw.githubusercontent.com/AnOldStory/Setting/master/resource/window/"
+$shortcutList = "https://api.github.com/repos/AnOldStory/Setting/contents/resource/window/Links?ref=master"
 
 $wantDDNS = $True # ddns-requester -5min
 $wantWSL = $True # wsl-connect-external -atlogin
@@ -157,11 +158,13 @@ function WSL_SSH_ON(){
 <###### Run Shortcut ######>
 function Shortcut_ON(){
   #download shortcut list
-  wget "$($cdn)Links" -OutFile "$($program_path)\Shortcut\"
+  $response = (Invoke-WebRequest -Uri $shortcutList).Content | ConvertFrom-Json
+  foreach ($file in $response){
+    wget $file.download_url -OutFile "$($program_path)\Shortcut\$($file.name)"
+  }
 
   #backup
   $env:path > $program_path\backup_env.txt
-  echo "helloi"
   if (!($env:Path -like "*$($program_path)\Shortcut*"))
   {
     #if not PATH exist

@@ -1,15 +1,17 @@
 # PersonalSetting
 > 개인적인 설정 파일 목록
 
+Setting Manager 
 
+[Window](https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.ps1)
+[Linux](https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.sh)
 
-<!-- 
-Windows
+<!-- Windows
 ===
 
 | 링크 | 설명 | 다운로드 |
 | --- | --- | --- |
-| [WinGPG](https://help.github.com/en/articles/telling-git-about-your-signing-key) | 윈도우 GPG 설치법 |   |
+| [Setting-Manager](https://help.github.com/en/articles/telling-git-about-your-signing-key) | 윈도우 GPG 설치법 |   |
 | [WinLinker](https://raw.githubusercontent.com/AnOldStory/Setting/master/Win/WinLinker.bat) | 윈도우 Github Shortcut 생성 | [다운로드](https://anoldstory.github.io/Setting/Win/WinLinker.bat)   |
 | [WinPSYarn](https://raw.githubusercontent.com/AnOldStory/Setting/master/Win/WinPSYarn.bat) | 윈도우 yarn global 저장경로 설정 | [다운로드](https://anoldstory.github.io/Setting/Win/WinPSYarn.bat)   |
 | [WinSandBox](https://raw.githubusercontent.com/AnOldStory/Setting/master/Win/WinSandBox.wsb) | 윈도우 샌드박스 인터넷 익스플로러 자동실행 | [다운로드](https://anoldstory.github.io/Setting/Win/WinSandBox.wsb)   |

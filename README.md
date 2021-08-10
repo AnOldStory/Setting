@@ -4,7 +4,6 @@
 
 
 ## Setting Manager 
----
 > All-In-One Script 
 
 Window -> [*Window PowerShell*](https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.ps1)

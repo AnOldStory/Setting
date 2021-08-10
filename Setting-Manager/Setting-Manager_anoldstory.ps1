@@ -1,10 +1,13 @@
+# Setting-Manager-PowerShell v1.0.0
+
+
 <###### Elevate for admin  ######>
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) 
   { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
 
 <###### Configure ######>
 $username = "thesky"
-$program_name = "Setting-Manager_anoldstory" # program name for schdueler & path 
+$program_name = "Setting-Manager-PowerShell" # program name for schdueler & path 
 $program_path = "$($Env:ProgramData)\$($program_name)" # program path
 $cdn = "https://raw.githubusercontent.com/AnOldStory/Setting/master/resource/window/"
 $shortcutList = "https://api.github.com/repos/AnOldStory/Setting/contents/resource/window/Links?ref=master"

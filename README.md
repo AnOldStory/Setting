@@ -1,10 +1,15 @@
 # PersonalSetting
 > 개인적인 설정 파일 목록
 
-Setting Manager 
 
-[Window](https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.ps1)
-[Linux](https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.sh)
+
+## Setting Manager 
+---
+> All-In-One Script 
+
+Window -> [*Window PowerShell*](https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.ps1)
+
+Linux -> [*Linux Bash*](https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.sh)
 
 <!-- Windows
 ===

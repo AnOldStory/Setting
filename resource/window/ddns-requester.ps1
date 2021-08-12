@@ -18,4 +18,4 @@ function EncodeMSG([string]$txt) {
 
 SendGetRequest("https://anoldstory.com/ping")
 SendGetRequest("https://anoldstory.net/ping")
-SendGetRequest("https://www.duckdns.org/update?domains=anoldstory&token=$Env:a_ddns&ip=")
+SendGetRequest("https://www.duckdns.org/update?domains=anoldstory-$Env:a_device&token=$Env:a_ddns&ip=")

@@ -39,6 +39,6 @@ echo 3. import setting
 import_setting(){
     cd ~/
     mkdir -p ~/.vim/colors
-    wget "https://www.vim.org/scripts/download_script.php?src_id=26557" -O jellybeans.vim
+    wget "https://www.vim.org/scripts/download_script.php?src_id=26557" -P ~/.vim/colors -O jellybeans.vim
     wget $setting_list -qO - | jq '.[0].download_url' | xargs wget
 }

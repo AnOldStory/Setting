@@ -24,7 +24,11 @@ repository_update(){
     sudo apt-get -y upgrade
     sudo apt-get -y dist-upgrade
     sudo apt-get -y autoremove
+
+    echo repository update ok!
 }
+
+repository_update
  
 echo 2. install package 
 install_package(){
@@ -33,12 +37,20 @@ install_package(){
     echo "export PATH=\"\$PATH:\$(yarn global bin)\"" >> .bashrc
     git config --global user.email "hc9904@hanyang.ac.kr"
     git config --global user.name "AnOldStory"
+
+    echo install package ok!
 }
  
+install_package
+
 echo 3. import setting
 import_setting(){
     cd ~/
     mkdir -p ~/.vim/colors
     wget "https://www.vim.org/scripts/download_script.php?src_id=26557" -P ~/.vim/colors -O jellybeans.vim
     wget $setting_list -qO - | jq '.[0].download_url' | xargs wget
+
+    echo import setting ok!
 }
+
+import_setting

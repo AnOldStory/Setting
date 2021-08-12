@@ -4,7 +4,7 @@ set nu
 set ts=2
 set shiftwidth=2
 set paste
-colorscheme 'coloerscheme jellybeans'
+colorscheme jellybeans
 
 " Syntax Highlighting
 if has(“syntax”)

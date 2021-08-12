@@ -5,7 +5,7 @@
 
 # Configure 
 
-setting_list = "https://api.github.com/repos/AnOldStory/Setting/contents/resource/linux?ref=master"
+setting_list="https://api.github.com/repos/AnOldStory/Setting/contents/resource/linux?ref=master"
 
 echo 1. repository update
 repository_update(){
@@ -38,6 +38,7 @@ install_package(){
 echo 3. import setting
 import_setting(){
     cd ~/
-    wget $setting_list -O list
-    cat list | jq .
+    mkdir -p ~/.vim/colors
+    wget "https://www.vim.org/scripts/download_script.php?src_id=26557" -O jellybeans.vim
+    wget $setting_list -qO - | jq '.[0].download_url' | xargs wget
 }

@@ -3,7 +3,7 @@
 
 <###### Elevate for admin  ######>
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) 
-  { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -Command `"iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.ps1'))
+  { Start-Process powershell.exe "-NoProfile -NoExit -ExecutionPolicy Bypass -Command `"iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.ps1'))
   `"" -Verb RunAs; exit }
 
 <###### Configure ######>
@@ -185,6 +185,3 @@ if ($wantShortcut) { Shortcut_ON }
 
 # stop logging
 Stop-Transcript
-
-
-Start-Sleep -s 10

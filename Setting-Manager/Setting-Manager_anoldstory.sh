@@ -54,3 +54,5 @@ import_setting(){
 }
 
 import_setting
+
+echo complete!

@@ -6,7 +6,7 @@ set shiftwidth=2
 set paste
 colorscheme jellybeans
 
-" Syntax Highlighting
-if has(“syntax”)
+"Syntax Highlighting
+if has("syntax")
     syntax on
 endif

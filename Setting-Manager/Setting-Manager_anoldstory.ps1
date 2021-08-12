@@ -184,3 +184,6 @@ if ($wantShortcut) { Shortcut_ON }
 
 # stop logging
 Stop-Transcript
+
+
+Start-Sleep -s 10

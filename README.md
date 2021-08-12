@@ -9,6 +9,10 @@
 Window -> [*Window PowerShell*](https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.ps1)
 
 Linux -> [*Linux Bash*](https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.sh)
+```
+wget https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.sh -O - | bash
+```
+
 
 <!-- Windows
 ===

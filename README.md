@@ -7,6 +7,10 @@
 > All-In-One Script 
 
 Window -> [*Window PowerShell*](https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.ps1)
+```
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.ps1'))
+```
+
 
 Linux -> [*Linux Bash*](https://raw.githubusercontent.com/AnOldStory/Setting/master/Setting-Manager/Setting-Manager_anoldstory.sh)
 ```

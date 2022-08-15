@@ -33,7 +33,7 @@ repository_update
 echo 2. install package 
 install_package(){
     nvm install node  # nodejs 
-    sudo apt-get -y install yarn docker.io gcc g++ make git jq
+    sudo apt-get -y install yarn docker.io gcc g++ make git jq vim
     echo "export PATH=\"\$PATH:\$(yarn global bin)\"" >> .bashrc
     git config --global user.email "hc9904@hanyang.ac.kr"
     git config --global user.name "AnOldStory"

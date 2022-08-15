@@ -1,0 +1,19 @@
+version: "3"
+services:
+  app:
+    image: linuxserver/code-server:latest
+    container_name: code-server
+    ports:
+      - 8007:8443
+    volumes:
+      - ${DATA_DIRECTORY}/code-server/config:/config
+      - ${DATA_DIRECTORY}/workspace:/workspace
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=Asia/Seoul
+      - PROXY_DOMAIN=${PROXY_DOMAIN}
+      - DEFAULT_WORKSPACE=/workspace
+      - PASSWORD=${PASSWORD}
+      - SUDO_PASSWORD=${PASSWORD}
+    restart: always

@@ -13,10 +13,10 @@ $program_path = "$($Env:ProgramData)\$($program_name)" # program path
 $cdn = "https://raw.githubusercontent.com/AnOldStory/Setting/master/resource/window/"
 $shortcutList = "https://api.github.com/repos/AnOldStory/Setting/contents/resource/window/Links?ref=master"
 
-$wantDDNS = $True # ddns-requester -5min
-$wantWSL = $True # wsl-connect-external -atlogin
-$wantWSLSSH = $True # wsl-ssh-starter -atlogin
-$wantShortcut = $True # make shortcut at run
+$wantDDNS = $False # ddns-requester -5min
+$wantWSL = $False # wsl-connect-external -atlogin
+$wantWSLSSH = $False # wsl-ssh-starter -atlogin
+$wantShortcut = $False # make shortcut at run
 
 <###### Log ######>
 #check directory 

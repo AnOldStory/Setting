@@ -15,9 +15,12 @@ echo Success: Administrative permissions confirmed.
 cd "%~dp0"
 
 CALL :MAKESERVICE "Onedrive-hanyang", "Z"
-CALL :MAKESERVICE "Onedrive-naver", "X"
+CALL :MAKESERVICE "Onedrive-naver", "Y"
+CALL :MAKESERVICE "Googledrive-hanyang", "X"
+CALL :MAKESERVICE "Googledrive-gmail", "W"
 
 echo "Install_Success"
+
 pause >nul
 GOTO :EOF
 
@@ -44,7 +47,7 @@ nssm.exe install rclone-%~1 ^
 --vfs-cache-max-age=336h ^
 --vfs-read-ahead=32M ^
 --dir-cache-time=1000h ^
---log-level=INFO ^
+--log-level=ERROR  ^
 --log-file="%userprofile%\rclone\rclone_mount.log" ^
 --cache-dir=/volume1/cache ^
 --timeout=1h ^

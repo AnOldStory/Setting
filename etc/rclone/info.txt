@@ -1,0 +1,8 @@
+- rclone 
+https://github.com/rclone/rclone/releases
+
+- nssm
+https://nssm.cc/download
+
+- get list of nssm 
+Get-WmiObject win32_service | ?{$_.PathName -like '*nssm*'} | select Name, DisplayName, State, PathName

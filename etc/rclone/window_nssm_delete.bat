@@ -14,9 +14,10 @@ echo Success: Administrative permissions confirmed.
 ::main_start::
 cd "%~dp0"
 
-CALL :DELETESERVICE "Onedrive-hanyang", "Z" 
-CALL :DELETESERVICE "Onedrive-naver", "X"
-
+CALL :DELETESERVICE "Onedrive-hanyang"
+CALL :DELETESERVICE "Onedrive-naver"
+CALL :DELETESERVICE "Googledrive-hanyang"
+CALL :DELETESERVICE "Googledrive-gmail"
 
 echo "Delete_Success"
 pause >nul
@@ -25,13 +26,9 @@ GOTO :EOF
 ::main_end::
 
 
-rem param1=<service_name> param2=<drive number>
+rem param1=<service_name>
 :DELETESERVICE
 IF [%~1]==[] GOTO:EOF
 nssm.exe stop rclone-%~1
 
 nssm.exe remove rclone-%~1 confirm
-
-
-pause >nul
-

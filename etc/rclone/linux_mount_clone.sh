@@ -3,7 +3,7 @@
 # CONFIG="~/.config/rclone/rclone.conf"
 #   --config=${CONFIG} \
 
-DIR_PREFIX="/HDD/rclone"
+DIR_PREFIX="/HDD/rclone/"
 
 STORAGE_LIST=(Onedrive-hanyang Onedrive-naver Googledrive-hanyang Googledrive-gmail)
 
@@ -17,7 +17,7 @@ for name in ${STORAGE_LIST[@]}
 do
   echo "mount start ${name}"
   mkdir ${DIR_PREFIX}/${name}
-  rclone mount ${name}:/ ${DIR_PREFIX}/${name} \
+  rclone mount ${name}:/ ${DIR_PREFIX}/mount/${name} \
   --allow-other \
   --allow-non-empty \
   --fast-list \

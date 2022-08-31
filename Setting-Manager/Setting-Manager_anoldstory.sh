@@ -37,6 +37,7 @@ install_package(){
     echo "export PATH=\"\$PATH:\$(yarn global bin)\"" >> .bashrc
     git config --global user.email "hc9904@hanyang.ac.kr"
     git config --global user.name "AnOldStory"
+    curl https://rclone.org/install.sh | sudo bash
 
     echo install package ok!
 }

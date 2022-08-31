@@ -12,11 +12,13 @@ STORAGE_LIST=(Onedrive-hanyang Onedrive-naver Googledrive-hanyang Googledrive-gm
 curl https://rclone.org/install.sh | sudo bash
 
 mkdir -p ${DIR_PREFIX}/cache
+mkdir -p ${DIR_PREFIX}/mount
+
 # mount storage
 for name in ${STORAGE_LIST[@]}
 do
   echo "mount start ${name}"
-  mkdir ${DIR_PREFIX}/${name}
+  mkdir -p ${DIR_PREFIX}/mount/${name}
   rclone mount ${name}:/ ${DIR_PREFIX}/mount/${name} \
   --allow-other \
   --allow-non-empty \

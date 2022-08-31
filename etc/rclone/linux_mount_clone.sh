@@ -3,7 +3,7 @@
 # CONFIG="~/.config/rclone/rclone.conf"
 #   --config=${CONFIG} \
 
-DIR_PREFIX="/HDD/rclone/"
+DIR_PREFIX="/HDD/rclone"
 
 STORAGE_LIST=(Onedrive-hanyang Onedrive-naver Googledrive-hanyang Googledrive-gmail)
 

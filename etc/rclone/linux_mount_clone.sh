@@ -38,7 +38,7 @@ do
   --log-level=ERROR  \
   --log-file=${DIR_PREFIX}/rclone_mount.log \
   --cache-dir=${DIR_PREFIX}/cache \
-  --timeout=1h
+  --timeout=1h &
   echo "mount done ${name}"
 done
 

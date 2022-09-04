@@ -18,6 +18,7 @@ CALL :DELETESERVICE "Onedrive-hanyang"
 CALL :DELETESERVICE "Onedrive-naver"
 CALL :DELETESERVICE "Googledrive-hanyang"
 CALL :DELETESERVICE "Googledrive-gmail"
+CALL :DELETESERVICE "Dropbox-naver"
 
 echo "Delete_Success"
 pause >nul

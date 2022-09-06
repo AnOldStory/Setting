@@ -49,7 +49,6 @@ do
   --vfs-cache-max-size=1G \
   --vfs-cache-max-age=336h \
   --vfs-read-ahead=32M \
-  --allow-non-empty \
   --log-file=${DIR_PREFIX}/rclone_mount.log \
   --cache-dir=${DIR_PREFIX}/cache \
   --timeout=1h &
@@ -58,5 +57,5 @@ done
 
 echo "done"
 
-
+#   --allow-non-empty \
 #  --rc --rc-no-auth --rc-addr 127.0.0.1:5572 \

@@ -15,6 +15,12 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 Linux
 
 ```
+wget https://setting.anoldstory.com/script/linux.sh -O - | bash
+```
+
+Ubuntu
+
+```
 wget https://raw.githubusercontent.com/AnOldStory/Setting/master/script/ubuntu.sh -O - | bash
 ```
 

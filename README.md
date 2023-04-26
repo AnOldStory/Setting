@@ -12,10 +12,10 @@ Window
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/AnOldStory/Setting/master/script/window.ps1'))
 ```
 
-Linux
+Terminal
 
 ```
-wget https://setting.anoldstory.com/script/linux.sh -O - | bash
+wget https://setting.anoldstory.com/script/terminal.sh -O - | bash
 ```
 
 Ubuntu
